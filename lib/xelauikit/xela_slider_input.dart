@@ -135,15 +135,28 @@ class XelaSliderTrackShape extends RoundedRectSliderTrackShape {
 
   bool active;
 
+// PaintingContext context,
+//     Offset offset, {
+//     required RenderBox parentBox,
+//     required SliderThemeData sliderTheme,
+//     required Animation<double> enableAnimation,
+//     required TextDirection textDirection,
+//     required Offset thumbCenter,
+//     Offset? secondaryOffset,
+//     bool isDiscrete = false,
+//     bool isEnabled = false,
+//     double additionalActiveTrackHeight = 2,
+
   @override
   void paint(
       PaintingContext context,
       Offset offset, {
-        required RenderBox parentBox,
+        required RenderBox? parentBox,
         required SliderThemeData sliderTheme,
         required Animation<double> enableAnimation,
         required TextDirection textDirection,
         required Offset thumbCenter,
+        Offset? secondaryOffset,
         bool isDiscrete = false,
         bool isEnabled = false,
         double additionalActiveTrackHeight = 4,
@@ -180,7 +193,7 @@ class XelaSliderTrackShape extends RoundedRectSliderTrackShape {
     }
 
     final Rect trackRect = getPreferredRect(
-      parentBox: parentBox,
+      parentBox: parentBox!,
       offset: offset,
       sliderTheme: sliderTheme,
       isEnabled: isEnabled,

@@ -20,7 +20,7 @@ class XelaUserAvatar extends StatefulWidget {
   final Color decorationBackground;
   final Color decorationForeground;
 
-  XelaUserAvatar({
+  XelaUserAvatar({Key? key, 
     this.count = 0,
     this.style = XelaUserAvatarStyle.RECTANGLE,
     this.size = XelaUserAvatarSize.MEDIUM,
@@ -35,7 +35,7 @@ class XelaUserAvatar extends StatefulWidget {
     this.decorationBorderColor = Colors.white,
     this.decorationBackground = XelaColor.Red3,
     this.decorationForeground = Colors.white
-  });
+  }) : super(key: key);
   @override
   _XelaUserAvatarState createState() => _XelaUserAvatarState();
 }

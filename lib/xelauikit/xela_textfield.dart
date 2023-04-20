@@ -33,7 +33,7 @@ class XelaTextField extends StatefulWidget {
   Function(String)? onChange;
 
 
-  XelaTextField({
+  XelaTextField({Key? key, 
     this.placeholder,
     this.value,
     this.textEditingController,
@@ -59,7 +59,7 @@ class XelaTextField extends StatefulWidget {
     this.successHelperTextColor = XelaColor.Green1,
     this.keyboardType = TextInputType.text,
     this.onChange,
-  });
+  }) : super(key: key);
 
   @override
   _XelaTextFieldState createState() => _XelaTextFieldState();
